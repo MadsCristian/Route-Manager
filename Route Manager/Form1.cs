@@ -71,7 +71,7 @@ namespace Route_Manager
 
             else if (comboBoxCableOrWiFi.SelectedIndex == -1)
             {
-                MessageBox.Show("You must select your connection!");
+                MessageBox.Show("You must select your connection!","Error");
                 return;
             }
 
@@ -80,9 +80,8 @@ namespace Route_Manager
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             DetectWiFi();
-
+            domain2ip();
 
             if (ComboBoxPermanent.SelectedIndex == 0)
             {
@@ -111,14 +110,29 @@ namespace Route_Manager
 
             else if (ComboBoxPermanent.SelectedIndex == -1)
             {
-                MessageBox.Show("You must select if you want the route to be permanent!");
+                MessageBox.Show("You must select if you want the route to be permanent!", "Error");
                 return;
             }
 
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void domain2ip()
+        {
+         try { 
+        string url_address = HostIP.Text;
+        IPHostEntry IPHostEntry = Dns.GetHostEntry(url_address);
+        IPAddress ipAddress = IPHostEntry.AddressList.First(a => a.AddressFamily == AddressFamily.InterNetwork); // ipv4
+
+        HostIP.Text = ipAddress.ToString();
+            }
+            catch (Exception)
+            {
+                
+            }
+}
+
+private void Form1_Load(object sender, EventArgs e)
         {
 
         }
