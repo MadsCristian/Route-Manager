@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.HostIP = new System.Windows.Forms.TextBox();
@@ -136,7 +137,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(292, 119);
+            this.ClientSize = new System.Drawing.Size(300, 105);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.comboBoxCableOrWiFi);
             this.Controls.Add(this.label5);
@@ -148,6 +149,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Route Manager";
             this.Load += new System.EventHandler(this.Form1_Load);
