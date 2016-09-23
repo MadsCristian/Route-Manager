@@ -58,13 +58,14 @@ namespace Route_Manager
         {
             if (comboBoxCableOrWiFi.SelectedIndex == 0)
             {
+                
                 localip.Text = GetLocalIPv4(NetworkInterfaceType.Wireless80211);
 
             }
             else if (comboBoxCableOrWiFi.SelectedIndex == 1)
             {
-                GetDefaultGateway();
 
+                GetDefaultGateway();
 
 
             }
@@ -134,6 +135,8 @@ namespace Route_Manager
 
 private void Form1_Load(object sender, EventArgs e)
         {
+
+            
 
         }
     }
